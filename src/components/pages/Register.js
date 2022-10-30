@@ -36,13 +36,11 @@ function Register() {
                     setEmail(e.target.value)
                 }}/>
                 <p></p>
-                <label>Password</label>
+                <label>Password:</label>
                 <br/>
-                <textarea
-                    onChange={(e) => {
-                        setPassword(e.target.value)
-                    }}
-                ></textarea>
+                <input type="text" onChange={(e) => {
+                    setPassword(e.target.value)
+                }}/>
                 <p></p>
                 <Button onClick={reg}>Register!</Button>
             </div>

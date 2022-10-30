@@ -8,7 +8,7 @@ function Footer() {
     const [email, setEmail] = useState("");
     const sub = () => {
         Axios.post('http://localhost:3002/api/sub', {email: email}).then(() => {
-            alert("Successful Subscribe")
+            alert("Successfully Subscribed to the Newsletter!!")
         })
     }
     return (
@@ -32,12 +32,10 @@ function Footer() {
             </section>
             <div class='footer-links'>
                 <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
-                        <h2>About Us</h2>
-                    </div>
+
                     <div class='footer-link-items'>
                         <h2 id="cu">Contact Us</h2>
-                        <Link>Chris ~ chrisacts@gmail.com</Link>
+                        <Link>Chris ~ chrisisaac@gmail.com</Link>
                         <Link>Sai ~ tsaicharan03@gmail.com</Link>
                         <Link>Alvaro ~ aaurtaza12@gmail.com</Link>
                         <Link>Leo ~ hahadude999@gmail.com</Link>
@@ -45,7 +43,11 @@ function Footer() {
                 </div>
                 <div className='footer-link-wrapper'>
                     <div class='footer-link-items'>
-                        <h2>Social Media</h2>
+                        <h2 id="sm">Social Media</h2>
+                        <Link>Chris ~ https://www.linkedin.com/in/chris-its-uh</Link>
+                        <Link>Sai ~ https://www.linkedin.com/in/sai-todupunoori/</Link>
+                        <Link>Alvaro ~ https://www.linkedin.com/alvaro-urtaza</Link>
+                        <Link>Leo ~ www.linkedin.com/in/leonardo-rodriguez34</Link>
                     </div>
                 </div>
             </div>

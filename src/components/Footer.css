@@ -63,7 +63,7 @@
     align-items: flex-start;
     margin: 16px;
     text-align: center;
-    width: 160px;
+    /* width: 300px; */
     box-sizing: border-box;
 }
 
@@ -163,6 +163,14 @@
 @media screen and (max-width: 768px) {
 }
 
-#cu{
+#cu{padding-left: 40px;
     text-align: center;
+    text-underline: black;
+}
+
+#sm{
+    padding-left: 85px;
+    text-align: center;
+    text-underline: black;
+
 }

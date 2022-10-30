@@ -50,10 +50,11 @@ router.post('/api/create', (request, response) => {
     var username = request.body.userName;
     var title = request.body.title;
     var text = request.body.text;
+    var price = request.body.price;
 
     console.log(username, title, text)
 
-    db.query("INSERT INTO posts (title, post_text, username) VALUES (?,?,?)", [title, text, username], (err, result) => {
+    db.query("INSERT INTO posts (title, post_text, username,price) VALUES (?,?,?,?)", [title, text, username,price], (err, result) => {
             if (err) {
                 console.log(err)
             }

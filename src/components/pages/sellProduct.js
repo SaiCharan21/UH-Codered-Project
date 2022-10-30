@@ -14,9 +14,11 @@ function SellProducts() {
     const [userName, setUserName] = useState("");
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
+    const [price, setPrice] = useState("");
+
 
     const submitPost = () => {
-        Axios.post('http://localhost:3002/api/create', {userName: userName, title: title, text: text}).then(() => {
+        Axios.post('http://localhost:3002/api/create', {userName: userName, title: title, text: text, price:price}).then(() => {
             alert("Succesful")
         })
     }
@@ -26,25 +28,32 @@ function SellProducts() {
             <div className="form">
                 <u><h2>Enter Seller Info</h2></u>
                 <br/>
-                <label>Username: </label>
+                <label>Seller: </label>
                 <br/>
                 <input type="text" onChange={(e) => {
                     setUserName(e.target.value)
                 }}/>
+
                 <p></p>
-                <label>Title: </label>
+                <label>Item: </label>
                 <br/>
                 <input type="text" onChange={(e) => {
                     setTitle(e.target.value)
                 }}/>
+
+                <p></p>
+                <label>Price: </label>
+                <br/>
+                <input type="text" onChange={(e) => {
+                    setPrice(e.target.value)
+                }}/>
+
                 <p></p>
                 <label>Description</label>
                 <br/>
-                <textarea
-                    onChange={(e) => {
-                        setText(e.target.value)
-                    }}
-                ></textarea>
+                <input type="text" onChange={(e) => {
+                    setText(e.target.value)
+                }}/>
                 <p></p>
                 <Button onClick={submitPost}>List It!</Button>
             </div>
